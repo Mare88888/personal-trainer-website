@@ -68,7 +68,7 @@ export default function Navbar() {
               <button
                 key={link.href}
                 onClick={() => scrollTo(link.href)}
-                className={`text-xs font-medium tracking-[0.18em] uppercase transition-colors duration-300 ${
+                className={`text-sm font-medium tracking-[0.18em] uppercase transition-colors duration-300 ${
                   scrolled
                     ? 'text-bark-500 hover:text-charcoal'
                     : 'text-white/70 hover:text-white'
