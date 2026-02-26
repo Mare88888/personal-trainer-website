@@ -15,19 +15,19 @@ export default function Hero() {
     document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
   }
 
-  const words = ['Transform', 'Your Body.', 'Elevate Your', 'Confidence.']
+  const words = ['Preoblikuj', 'Svoje Telo.', 'Dvigni Svojo', 'Samozavest.']
 
   return (
     <section
       ref={containerRef}
       className="relative min-h-screen flex items-end overflow-hidden bg-charcoal"
-      aria-label="Hero section"
+      aria-label="Uvodni razdelek"
     >
       {/* Background image */}
       <motion.div className="absolute inset-0" style={{ y }}>
         <Image
-          src="/images/hero.jpg"
-          alt="Petra Kovač personal trainer"
+          src="/images/hero.png"
+          alt="Petra Kovač osebna trenerka"
           fill
           priority
           quality={90}
@@ -60,7 +60,7 @@ export default function Hero() {
             >
               <div className="h-px w-12 bg-terracotta-400" aria-hidden="true" />
               <span className="section-label text-blush-100">
-                Personal Trainer · Ljubljana, Slovenia
+                Osebna Trenerka · Ljubljana, Slovenija
               </span>
             </motion.div>
 
@@ -95,15 +95,15 @@ export default function Hero() {
               className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-6"
             >
               <p className="text-white/60 text-base leading-relaxed max-w-sm font-light">
-                Personalised coaching programmes designed for women who want
-                real, lasting results — body and mind.
+                Personalizirani coaching programi, zasnovani za ženske,
+                ki želijo resnične, trajne rezultate – za telo in um.
               </p>
               <button
                 onClick={scrollToContact}
                 className="btn-primary shrink-0 group"
-                aria-label="Start your transformation — scroll to contact"
+                aria-label="Začni svojo preobrazbo – pomakni se na kontakt"
               >
-                Start Your Transformation
+                Začni Svojo Preobrazbo
                 <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">
                   →
                 </span>
@@ -118,9 +118,9 @@ export default function Hero() {
               className="mt-16 pt-10 border-t border-white/10 grid grid-cols-3 gap-6 max-w-lg"
             >
               {[
-                { value: '7+', label: 'Years Experience' },
-                { value: '200+', label: 'Clients Coached' },
-                { value: '95%', label: 'Success Rate' },
+                { value: '7+', label: 'Let izkušenj' },
+                { value: '200+', label: 'Strank' },
+                { value: '95%', label: 'Uspešnost' },
               ].map((stat) => (
                 <div key={stat.label}>
                   <p className="font-display text-3xl lg:text-4xl text-white font-light">{stat.value}</p>
@@ -139,7 +139,7 @@ export default function Hero() {
           className="absolute bottom-8 right-8 lg:right-12 flex flex-col items-center gap-2 text-white/30"
         >
           <span className="text-[10px] tracking-[0.2em] uppercase rotate-90 origin-center translate-y-6">
-            Scroll
+            Dol
           </span>
           <motion.div
             animate={{ y: [0, 8, 0] }}

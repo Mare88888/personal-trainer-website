@@ -71,18 +71,18 @@ export default function Newsletter() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-2xl mx-auto text-center"
         >
-          <span className="section-label text-terracotta-300 block mb-5">Stay Connected</span>
+          <span className="section-label text-terracotta-300 block mb-5">Ostani v stiku</span>
 
           <h2
             id="newsletter-heading"
             className="heading-lg text-white mb-5"
           >
-            Join the <span className="italic text-terracotta-300">Community</span>
+            Pridruži se <span className="italic text-terracotta-300">Skupnosti</span>
           </h2>
 
           <p className="text-white/50 leading-relaxed mb-10 max-w-md mx-auto">
-            Weekly tips on training, nutrition, and mindset — plus exclusive programme launches,
-            early-bird offers, and behind-the-scenes content.
+            Tedni nasveti o treningu, prehrani in miselnosti – ter ekskluzivne novosti o programih,
+            zgodnje cene in zakulisne vsebine.
           </p>
 
           {/* Form */}
@@ -94,14 +94,14 @@ export default function Newsletter() {
             >
               <CheckCircle size={22} className="text-terracotta-400 shrink-0" />
               <p className="text-lg font-display">
-                You&apos;re in! Welcome to the community.
+                Uspelo! Dobrodošla v skupnost.
               </p>
             </motion.div>
           ) : (
             <form
               onSubmit={handleSubmit(onSubmit)}
               noValidate
-              aria-label="Newsletter subscription form"
+              aria-label="Obrazec za naročnino na novice"
             >
               {/* Honeypot — hidden from real users */}
               <input
@@ -116,23 +116,23 @@ export default function Newsletter() {
               <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
                 <div className="flex-1">
                   <label htmlFor="newsletter-email" className="sr-only">
-                    Email address
+                    E-poštni naslov
                   </label>
                   <input
                     id="newsletter-email"
                     type="email"
                     autoComplete="email"
-                    placeholder="your@email.com"
+                    placeholder="Vnesite vaš e-poštni naslov"
                     aria-describedby={errors.email ? 'newsletter-email-error' : undefined}
                     aria-invalid={!!errors.email}
-                    className={`w-full px-5 py-4 rounded-full bg-white/8 border text-white placeholder-white/30 text-sm focus:outline-none focus:ring-2 focus:ring-terracotta-400/60 transition-all duration-200 ${
-                      errors.email ? 'border-red-400/60' : 'border-white/12 focus:border-terracotta-400/50'
+                    className={`w-full px-5 py-4 rounded-full bg-white border text-charcoal placeholder-bark-400 text-sm focus:outline-none focus:ring-2 focus:ring-terracotta-400/40 transition-all duration-200 ${
+                      errors.email ? 'border-red-400' : 'border-white focus:border-terracotta-400'
                     }`}
                     {...register('email', {
-                      required: 'Email address is required',
+                      required: 'E-poštni naslov je obvezen',
                       pattern: {
                         value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                        message: 'Please enter a valid email address',
+                        message: 'Vnesite veljaven e-poštni naslov',
                       },
                     })}
                   />
@@ -151,12 +151,12 @@ export default function Newsletter() {
                   {status === 'loading' ? (
                     <>
                       <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      <span>Subscribing…</span>
+                      <span>Prijavljam…</span>
                     </>
                   ) : (
                     <>
                       <Send size={14} />
-                      <span>Subscribe</span>
+                      <span>Prijavi se</span>
                     </>
                   )}
                 </button>
@@ -170,12 +170,12 @@ export default function Newsletter() {
                   className="mt-4 flex items-center justify-center gap-2 text-red-400 text-sm"
                 >
                   <AlertCircle size={14} />
-                  <span>Something went wrong. Please try again.</span>
+                  <span>Prišlo je do napake. Poskusi znova.</span>
                 </motion.div>
               )}
 
               <p className="mt-5 text-white/25 text-xs">
-                No spam, ever. Unsubscribe at any time.
+                Brez neželene pošte. Odjava kadarkoli.
               </p>
             </form>
           )}

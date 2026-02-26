@@ -13,9 +13,9 @@ const certifications = [
 ]
 
 const stats = [
-  { value: '7+', label: 'Years Experience' },
-  { value: '200+', label: 'Women Coached' },
-  { value: '3', label: 'Specialisations' },
+  { value: '7+', label: 'Let izkušenj' },
+  { value: '200+', label: 'Žensk' },
+  { value: '3', label: 'Specializacij' },
 ]
 
 const container = {
@@ -56,8 +56,8 @@ export default function About() {
             {/* Main image */}
             <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-blush-200">
               <Image
-                src="/images/trainer.jpg"
-                alt="Petra Kovač — certified personal trainer"
+                src="/images/pt_hero.png"
+                alt="Petra Kovač — certificirana osebna trenerka"
                 fill
                 quality={90}
                 className="object-cover object-top"
@@ -80,7 +80,7 @@ export default function About() {
               className="absolute bottom-8 -right-4 lg:-right-8 bg-white rounded-xl px-5 py-4 shadow-xl shadow-charcoal/8"
             >
               <p className="text-terracotta-400 font-display text-2xl font-semibold">7+</p>
-              <p className="text-bark-500 text-xs tracking-wide mt-0.5">Years of excellence</p>
+              <p className="text-bark-500 text-xs tracking-wide mt-0.5">Let odličnosti</p>
             </motion.div>
           </motion.div>
 
@@ -92,7 +92,7 @@ export default function About() {
             viewport={{ once: true, margin: '-80px' }}
           >
             <motion.span variants={item} className="section-label block mb-4">
-              Meet Your Coach
+              Spoznaj svojo trenerko
             </motion.span>
 
             <motion.h2
@@ -105,22 +105,23 @@ export default function About() {
             </motion.h2>
 
             <motion.p variants={item} className="text-bark-500 leading-relaxed mb-4">
-              I believe every woman deserves to feel powerful in her own body. After years of helping
-              clients transform not just their physique but their entire relationship with movement and
-              nutrition, I've built a coaching method rooted in science, empathy, and long-term results.
+              Verjamem, da si vsaka ženska zasluži, da se počuti močna v svojem telesu. Po letih
+              pomoči strankam pri preobrazbi ne le njihove postave, ampak celotnega odnosa z gibanjem
+              in prehrano, sem razvila coaching metodo, zasnovano na znanosti, empatiji in
+              dolgoročnih rezultatih.
             </motion.p>
 
             <motion.p variants={item} className="text-bark-500 leading-relaxed mb-10">
-              Based in Ljubljana, I work with women across Slovenia and worldwide through my online
-              programmes — meeting you exactly where you are and guiding you to where you want to be.
+              Delam v Ljubljani in s svojimi spletnimi programi pomagam ženskam po vsej Sloveniji
+              in svetu – srečam te tam, kjer si, in te vodim tja, kamor želiš priti.
             </motion.p>
 
             {/* Certifications */}
             <motion.div variants={item} className="mb-10">
               <p className="text-xs font-medium tracking-[0.18em] uppercase text-charcoal mb-4">
-                Certifications
+                Certifikati
               </p>
-              <ul className="space-y-2.5" aria-label="Professional certifications">
+              <ul className="space-y-2.5" aria-label="Poklicni certifikati">
                 {certifications.map((cert) => (
                   <li key={cert} className="flex items-start gap-3">
                     <CheckCircle

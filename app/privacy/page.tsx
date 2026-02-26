@@ -2,8 +2,8 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Petra Kovač',
-  description: 'Privacy Policy for Petra Kovač Personal Training website.',
+  title: 'Politika zasebnosti | Petra Kovač',
+  description: 'Politika zasebnosti spletne strani Petra Kovač – osebna trenerka.',
   robots: { index: false, follow: false },
 }
 
@@ -15,31 +15,62 @@ export default function PrivacyPage() {
           href="/"
           className="text-terracotta-400 text-sm tracking-wide hover:underline block mb-10"
         >
-          ← Back to Home
+          ← Nazaj na začetek
         </Link>
 
-        <h1 className="font-display text-5xl text-charcoal mb-10">Privacy Policy</h1>
+        <h1 className="font-display text-5xl text-charcoal mb-10">Politika zasebnosti</h1>
 
         <div className="prose prose-stone max-w-none text-bark-500 leading-relaxed space-y-6">
-          <p className="text-sm text-bark-400">Last updated: {new Date().toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+          <p className="text-sm text-bark-400">
+            Nazadnje posodobljeno:{' '}
+            {new Date().toLocaleDateString('sl-SI', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}
+          </p>
 
-          <h2 className="font-display text-2xl text-charcoal mt-10">1. Information We Collect</h2>
-          <p>We collect information you provide directly, such as your name, email address, and message when you submit a contact form or subscribe to our newsletter.</p>
+          <h2 className="font-display text-2xl text-charcoal mt-10">1. Podatki, ki jih zbiramo</h2>
+          <p>
+            Zbiramo podatke, ki nam jih neposredno posredujete, kot so vaše ime, e-poštni naslov in
+            sporočilo, ko izpolnite kontaktni obrazec ali se naročite na naše novice.
+          </p>
 
-          <h2 className="font-display text-2xl text-charcoal mt-8">2. How We Use Your Information</h2>
-          <p>We use the information collected to respond to your enquiries, provide coaching services, and send you newsletters if you have subscribed.</p>
+          <h2 className="font-display text-2xl text-charcoal mt-8">2. Uporaba vaših podatkov</h2>
+          <p>
+            Zbrane podatke uporabljamo za odgovarjanje na vaša povpraševanja, zagotavljanje coaching
+            storitev in pošiljanje novic, če ste se nanje naročili.
+          </p>
 
-          <h2 className="font-display text-2xl text-charcoal mt-8">3. Third-Party Services</h2>
-          <p>We use Formspree to process form submissions. Your data is handled according to Formspree&apos;s Privacy Policy. We do not sell your personal information to any third parties.</p>
+          <h2 className="font-display text-2xl text-charcoal mt-8">3. Tretje osebe</h2>
+          <p>
+            Za obdelavo obrazcev uporabljamo storitev Formspree. Vaši podatki so obravnavani v skladu
+            s politiko zasebnosti Formspree. Vaših osebnih podatkov ne prodajamo tretjim osebam.
+          </p>
 
-          <h2 className="font-display text-2xl text-charcoal mt-8">4. Data Retention</h2>
-          <p>We retain your personal data only for as long as necessary to fulfil the purposes for which it was collected.</p>
+          <h2 className="font-display text-2xl text-charcoal mt-8">4. Hramba podatkov</h2>
+          <p>
+            Vaše osebne podatke hranimo le toliko časa, kolikor je potrebno za uresničitev namenov,
+            za katere so bili zbrani.
+          </p>
 
-          <h2 className="font-display text-2xl text-charcoal mt-8">5. Your Rights</h2>
-          <p>You have the right to access, correct, or delete your personal data. Please contact us at petra@petrakovac.com to exercise these rights.</p>
+          <h2 className="font-display text-2xl text-charcoal mt-8">5. Vaše pravice</h2>
+          <p>
+            Imate pravico do dostopa, popravka ali izbrisa svojih osebnih podatkov. Za uveljavljanje
+            teh pravic nas kontaktirajte na{' '}
+            <a href="mailto:petra@petrakovac.com" className="text-terracotta-400 hover:underline">
+              petra@petrakovac.com
+            </a>
+            .
+          </p>
 
-          <h2 className="font-display text-2xl text-charcoal mt-8">6. Contact</h2>
-          <p>For any privacy-related questions, please contact: <a href="mailto:petra@petrakovac.com" className="text-terracotta-400 hover:underline">petra@petrakovac.com</a></p>
+          <h2 className="font-display text-2xl text-charcoal mt-8">6. Kontakt</h2>
+          <p>
+            Za vsa vprašanja v zvezi z zasebnostjo nas kontaktirajte:{' '}
+            <a href="mailto:petra@petrakovac.com" className="text-terracotta-400 hover:underline">
+              petra@petrakovac.com
+            </a>
+          </p>
         </div>
       </div>
     </main>

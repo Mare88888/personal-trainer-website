@@ -18,9 +18,9 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Petra Kovač | Personal Trainer Ljubljana',
+  title: 'Petra Kovač | Osebna Trenerka Ljubljana',
   description:
-    'Premium personal training and online coaching for women in Ljubljana, Slovenia. Transform your body and elevate your confidence with certified trainer Petra Kovač.',
+    'Premium osebni trening in spletni coaching za ženske v Ljubljani, Slovenija. Preoblikuj telo in dvigni samozavest s certificirano trenerko Petro Kovač.',
   keywords: [
     'personal trainer Ljubljana',
     'osebni trener Ljubljana',
@@ -33,12 +33,12 @@ export const metadata: Metadata = {
   creator: 'Petra Kovač',
   openGraph: {
     type: 'website',
-    locale: 'en_US',
+    locale: 'sl_SI',
     url: 'https://www.petrakovac.com',
-    siteName: 'Petra Kovač | Personal Trainer',
-    title: 'Petra Kovač | Personal Trainer Ljubljana',
+    siteName: 'Petra Kovač | Osebna Trenerka',
+    title: 'Petra Kovač | Osebna Trenerka Ljubljana',
     description:
-      'Premium personal training and online coaching for women. Transform your body, elevate your confidence.',
+      'Premium osebni trening in spletni coaching za ženske. Preoblikuj telo, dvigni samozavest.',
     images: [
       {
         url: '/og-image.jpg',
@@ -50,8 +50,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Petra Kovač | Personal Trainer Ljubljana',
-    description: 'Transform your body and elevate your confidence with premium coaching.',
+    title: 'Petra Kovač | Osebna Trenerka Ljubljana',
+    description: 'Preoblikuj telo in dvigni samozavest s premium coachingom.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -70,7 +70,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${dmSans.variable}`}>
+    <html lang="sl" className={`${cormorant.variable} ${dmSans.variable}`}>
       <body className="font-sans antialiased">{children}</body>
     </html>
   )

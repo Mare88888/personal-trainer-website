@@ -5,11 +5,11 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 
 const navLinks = [
-  { href: '#about', label: 'About' },
-  { href: '#programs', label: 'Programs' },
-  { href: '#transformations', label: 'Results' },
-  { href: '#testimonials', label: 'Testimonials' },
-  { href: '#contact', label: 'Contact' },
+  { href: '#about', label: 'O meni' },
+  { href: '#programs', label: 'Programi' },
+  { href: '#transformations', label: 'Rezultati' },
+  { href: '#testimonials', label: 'Mnenja' },
+  { href: '#contact', label: 'Kontakt' },
 ]
 
 export default function Navbar() {
@@ -47,14 +47,14 @@ export default function Navbar() {
             : 'bg-transparent'
         }`}
         role="navigation"
-        aria-label="Main navigation"
+        aria-label="Glavna navigacija"
       >
         <div className="container-wide h-16 lg:h-20 flex items-center justify-between">
           {/* Logo */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="font-display text-xl lg:text-2xl tracking-wider focus:outline-none"
-            aria-label="Go to top"
+            aria-label="Na vrh strani"
           >
             <span className={`transition-colors duration-500 ${scrolled ? 'text-charcoal' : 'text-white'}`}>
               PETRA
@@ -85,7 +85,7 @@ export default function Navbar() {
               onClick={() => scrollTo('#contact')}
               className="px-6 py-2.5 rounded-full text-xs font-medium tracking-[0.18em] uppercase transition-all duration-300 bg-terracotta-400 text-white hover:bg-terracotta-500 hover:shadow-lg hover:shadow-terracotta-400/25"
             >
-              Book a Call
+              Rezerviraj klic
             </button>
           </div>
 
@@ -93,7 +93,7 @@ export default function Navbar() {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="lg:hidden p-2 rounded-md focus:outline-none"
-            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+            aria-label={mobileOpen ? 'Zapri meni' : 'Odpri meni'}
             aria-expanded={mobileOpen}
           >
             {mobileOpen ? (
@@ -115,7 +115,7 @@ export default function Navbar() {
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="fixed inset-0 z-40 bg-ivory-100 flex flex-col justify-center px-8"
           >
-            <nav className="flex flex-col gap-2" aria-label="Mobile navigation">
+            <nav className="flex flex-col gap-2" aria-label="Mobilna navigacija">
               {navLinks.map((link, i) => (
                 <motion.button
                   key={link.href}
@@ -138,7 +138,7 @@ export default function Navbar() {
                   onClick={() => scrollTo('#contact')}
                   className="btn-primary"
                 >
-                  Book a Call
+                  Rezerviraj klic
                 </button>
               </motion.div>
             </nav>

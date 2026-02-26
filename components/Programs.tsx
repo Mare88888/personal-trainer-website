@@ -6,52 +6,52 @@ import { Check, ArrowRight } from 'lucide-react'
 const programs = [
   {
     number: '01',
-    title: '1-on-1 Personal Coaching',
-    tagline: 'In-person · Ljubljana',
+    title: '1-na-1 Osebni Coaching',
+    tagline: 'Osebno · Ljubljana',
     description:
-      'The most personalised training experience available. We work together face-to-face to sculpt a programme built entirely around you.',
+      'Najosebnejša izkušnja treninga, ki je na voljo. Skupaj delava iz oči v oči, da oblikujeva program, ki je v celoti prilagojen tebi.',
     benefits: [
-      'Fully customised training plan',
-      'Weekly programme adjustments',
-      'Nutrition guidance included',
-      'Progress tracking & check-ins',
-      'Priority WhatsApp support',
+      'Popolnoma prilagojen plan treninga',
+      'Tedenske prilagoditve programa',
+      'Vključeno prehransko svetovanje',
+      'Sledenje napredku in redni check-ini',
+      'Prioritetna podpora na WhatsAppu',
     ],
-    cta: 'Enquire Now',
+    cta: 'Povpraši zdaj',
     accent: 'bg-blush-50 border-blush-200',
     badge: null,
   },
   {
     number: '02',
-    title: 'Online Coaching',
-    tagline: 'Remote · Worldwide',
+    title: 'Spletni Coaching',
+    tagline: 'Na daljavo · Po vsem svetu',
     description:
-      'Train anywhere in the world with the same level of expert guidance. App-based programming with regular video check-ins and daily accountability.',
+      'Treniraj kjerkoli na svetu z enako ravnjo strokovnega vodenja. Programiranje prek aplikacije z rednimi video klici in dnevno odgovornostjo.',
     benefits: [
-      'Custom programme in coaching app',
-      'Video form reviews',
-      'Macro & meal planning',
-      'Bi-weekly video calls',
-      'Community access & support',
+      'Prilagojen program v coaching aplikaciji',
+      'Video pregledi tehnike gibanja',
+      'Makro načrt in planiranje obrokov',
+      'Dvotedenski video klici',
+      'Dostop do skupnosti in podpora',
     ],
-    cta: 'Apply Now',
+    cta: 'Prijavi se',
     accent: 'bg-charcoal border-charcoal',
-    badge: 'Most Popular',
+    badge: 'Najbolj priljubljen',
   },
   {
     number: '03',
-    title: '12-Week Transformation',
-    tagline: 'Online · Fixed Duration',
+    title: '12-tedenska Preobrazba',
+    tagline: 'Spletno · Določeno trajanje',
     description:
-      'A proven, structured programme with a clear start and finish. Designed for total beginners or those who need a dedicated reset.',
+      'Preverjen, strukturiran program z jasnim začetkom in koncem. Zasnovan za popolne začetnike ali tiste, ki potrebujejo svež začetek.',
     benefits: [
-      'Complete 12-week blueprint',
-      'Phased training progression',
-      'Full nutrition plan',
-      'Weekly video modules',
-      'Lifetime access to materials',
+      'Celoten 12-tedenski načrt',
+      'Stopnjevanje treninga po fazah',
+      'Popoln prehranski načrt',
+      'Tedenski video moduli',
+      'Dostop do materialov za vse življenje',
     ],
-    cta: 'Join the Programme',
+    cta: 'Pridruži se programu',
     accent: 'bg-ivory-100 border-parchment',
     badge: null,
   },
@@ -84,12 +84,12 @@ export default function Programs() {
           transition={{ duration: 0.7 }}
           className="text-center mb-16 lg:mb-20"
         >
-          <span className="section-label block mb-4">What I Offer</span>
+          <span className="section-label block mb-4">Kaj ponujam</span>
           <h2 id="programs-heading" className="heading-lg text-charcoal">
-            Coaching <span className="italic text-terracotta-400">Programmes</span>
+            Coaching <span className="italic text-terracotta-400">Programi</span>
           </h2>
           <p className="mt-4 text-bark-500 max-w-xl mx-auto leading-relaxed">
-            Three distinct pathways, each designed to meet you where you are and take you where you want to be.
+            Tri različne poti – vsaka zasnovana tako, da te sreča tam, kjer si, in te pelje tja, kamor želiš.
           </p>
         </motion.div>
 
@@ -161,7 +161,7 @@ export default function Programs() {
                 </p>
 
                 {/* Benefits */}
-                <ul className="space-y-2.5 mb-8 flex-1" aria-label="Programme benefits">
+                <ul className="space-y-2.5 mb-8 flex-1" aria-label="Ugodnosti programa">
                   {program.benefits.map((benefit) => (
                     <li key={benefit} className="flex items-start gap-3">
                       <Check
@@ -190,7 +190,7 @@ export default function Programs() {
                       ? 'text-white hover:text-terracotta-300'
                       : 'text-charcoal hover:text-terracotta-400'
                   }`}
-                  aria-label={`${program.cta} — ${program.title}`}
+                  aria-label={`${program.cta} – ${program.title}`}
                 >
                   {program.cta}
                   <ArrowRight

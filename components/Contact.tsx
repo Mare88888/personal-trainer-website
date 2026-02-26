@@ -80,13 +80,13 @@ export default function Contact() {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <span className="section-label block mb-4">Get in Touch</span>
+          <span className="section-label block mb-4">Stopite v stik</span>
           <h2 id="contact-heading" className="heading-lg text-charcoal">
-            Start Your <span className="italic text-terracotta-400">Journey</span>
+            Začni Svojo <span className="italic text-terracotta-400">Pot</span>
           </h2>
           <p className="mt-4 text-bark-500 max-w-xl mx-auto leading-relaxed">
-            Ready to transform? Fill in the form and I&apos;ll get back to you within 24 hours to
-            discuss which programme is right for you.
+            Pripravljena na preobrazbo? Izpolni obrazec in se ti oglasim v 24 urah,
+            da skupaj poiščeva pravi program zate.
           </p>
         </motion.div>
 
@@ -107,22 +107,22 @@ export default function Contact() {
                 className="bg-white rounded-2xl p-12 text-center"
               >
                 <CheckCircle size={40} className="text-terracotta-400 mx-auto mb-4" />
-                <h3 className="font-display text-3xl text-charcoal mb-2">Message Sent!</h3>
+                <h3 className="font-display text-3xl text-charcoal mb-2">Sporočilo poslano!</h3>
                 <p className="text-bark-500 leading-relaxed">
-                  Thank you for reaching out. I&apos;ll be in touch within 24 hours.
+                  Hvala za tvoje sporočilo. Oglasim se v 24 urah.
                 </p>
                 <button
                   onClick={() => setStatus('idle')}
                   className="mt-8 btn-outline text-charcoal border-parchment hover:border-charcoal"
                 >
-                  Send Another Message
+                  Pošlji novo sporočilo
                 </button>
               </motion.div>
             ) : (
               <form
                 onSubmit={handleSubmit(onSubmit)}
                 noValidate
-                aria-label="Contact form"
+                aria-label="Kontaktni obrazec"
                 className="space-y-5"
               >
                 {/* Honeypot */}
@@ -138,7 +138,7 @@ export default function Contact() {
                 {/* Name */}
                 <motion.div variants={item}>
                   <label htmlFor="contact-name" className="block text-xs font-medium tracking-[0.15em] uppercase text-charcoal mb-2">
-                    Full Name <span aria-hidden="true" className="text-terracotta-400">*</span>
+                    Ime in priimek <span aria-hidden="true" className="text-terracotta-400">*</span>
                   </label>
                   <input
                     id="contact-name"
@@ -149,7 +149,7 @@ export default function Contact() {
                     aria-invalid={!!errors.name}
                     aria-describedby={errors.name ? 'contact-name-error' : undefined}
                     className={`${inputBase} ${errors.name ? 'border-red-300' : 'border-parchment focus:border-terracotta-400/50'}`}
-                    {...register('name', { required: 'Please enter your name' })}
+                    {...register('name', { required: 'Vnesite svoje ime' })}
                   />
                   {errors.name && (
                     <p id="contact-name-error" role="alert" className="mt-1.5 text-red-500 text-xs">
@@ -161,22 +161,22 @@ export default function Contact() {
                 {/* Email */}
                 <motion.div variants={item}>
                   <label htmlFor="contact-email" className="block text-xs font-medium tracking-[0.15em] uppercase text-charcoal mb-2">
-                    Email Address <span aria-hidden="true" className="text-terracotta-400">*</span>
+                    E-poštni naslov <span aria-hidden="true" className="text-terracotta-400">*</span>
                   </label>
                   <input
                     id="contact-email"
                     type="email"
                     autoComplete="email"
-                    placeholder="jana@example.com"
+                    placeholder="jana@primer.com"
                     aria-required="true"
                     aria-invalid={!!errors.email}
                     aria-describedby={errors.email ? 'contact-email-error' : undefined}
                     className={`${inputBase} ${errors.email ? 'border-red-300' : 'border-parchment focus:border-terracotta-400/50'}`}
                     {...register('email', {
-                      required: 'Please enter your email address',
+                      required: 'Vnesite e-poštni naslov',
                       pattern: {
                         value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                        message: 'Please enter a valid email address',
+                        message: 'Vnesite veljaven e-poštni naslov',
                       },
                     })}
                   />
@@ -190,19 +190,19 @@ export default function Contact() {
                 {/* Message */}
                 <motion.div variants={item}>
                   <label htmlFor="contact-message" className="block text-xs font-medium tracking-[0.15em] uppercase text-charcoal mb-2">
-                    Message <span aria-hidden="true" className="text-terracotta-400">*</span>
+                    Sporočilo <span aria-hidden="true" className="text-terracotta-400">*</span>
                   </label>
                   <textarea
                     id="contact-message"
                     rows={5}
-                    placeholder="Tell me about your goals, current fitness level, and any questions you have..."
+                    placeholder="Povej mi o svojih ciljih, trenutni kondicijski ravni in vprašanjih, ki jih imaš…"
                     aria-required="true"
                     aria-invalid={!!errors.message}
                     aria-describedby={errors.message ? 'contact-message-error' : undefined}
                     className={`${inputBase} resize-none ${errors.message ? 'border-red-300' : 'border-parchment focus:border-terracotta-400/50'}`}
                     {...register('message', {
-                      required: 'Please enter a message',
-                      minLength: { value: 20, message: 'Message must be at least 20 characters' },
+                      required: 'Vnesite sporočilo',
+                      minLength: { value: 20, message: 'Sporočilo mora vsebovati vsaj 20 znakov' },
                     })}
                   />
                   {errors.message && (
@@ -220,7 +220,7 @@ export default function Contact() {
                     className="flex items-center gap-2 text-red-500 text-sm"
                   >
                     <AlertCircle size={14} />
-                    <span>Something went wrong. Please try again or email me directly.</span>
+                    <span>Prišlo je do napake. Poskusi znova ali me kontaktiraj neposredno.</span>
                   </motion.div>
                 )}
 
@@ -233,12 +233,12 @@ export default function Contact() {
                     {status === 'loading' ? (
                       <>
                         <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                        <span>Sending…</span>
+                        <span>Pošiljam…</span>
                       </>
                     ) : (
                       <>
                         <Send size={14} />
-                        <span>Send Message</span>
+                        <span>Pošlji sporočilo</span>
                       </>
                     )}
                   </button>
@@ -256,7 +256,7 @@ export default function Contact() {
             className="lg:col-span-2 lg:pt-2"
           >
             <div className="bg-white rounded-2xl p-8 mb-6">
-              <h3 className="font-display text-2xl text-charcoal mb-6">Let&apos;s Connect</h3>
+              <h3 className="font-display text-2xl text-charcoal mb-6">Povežimo se</h3>
 
               <div className="space-y-5">
                 {/* Location */}
@@ -265,9 +265,9 @@ export default function Contact() {
                     <MapPin size={16} className="text-terracotta-400" aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="text-charcoal text-sm font-medium">Location</p>
-                    <p className="text-bark-500 text-sm mt-0.5">Ljubljana, Slovenia</p>
-                    <p className="text-bark-400 text-xs mt-0.5">In-person & remote worldwide</p>
+                    <p className="text-charcoal text-sm font-medium">Lokacija</p>
+                    <p className="text-bark-500 text-sm mt-0.5">Ljubljana, Slovenija</p>
+                    <p className="text-bark-400 text-xs mt-0.5">Osebno in na daljavo po vsem svetu</p>
                   </div>
                 </div>
 
@@ -277,7 +277,7 @@ export default function Contact() {
                     <Mail size={16} className="text-terracotta-400" aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="text-charcoal text-sm font-medium">Email</p>
+                    <p className="text-charcoal text-sm font-medium">E-pošta</p>
                     <a
                       href="mailto:petra@petrakovac.com"
                       className="text-bark-500 text-sm mt-0.5 hover:text-terracotta-400 transition-colors"
@@ -309,9 +309,9 @@ export default function Contact() {
 
             {/* Response time note */}
             <div className="bg-blush-50 rounded-xl px-6 py-5 border border-blush-200">
-              <p className="text-charcoal text-sm font-medium mb-1">⚡ Quick Response</p>
+              <p className="text-charcoal text-sm font-medium mb-1">⚡ Hiter odziv</p>
               <p className="text-bark-500 text-sm leading-relaxed">
-                I personally respond to every enquiry within 24 hours, Monday–Saturday.
+                Osebno odgovorim na vsako povpraševanje v 24 urah, od ponedeljka do sobote.
               </p>
             </div>
           </motion.div>
