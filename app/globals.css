@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ivory-100: #F8F4EF;
+  --terracotta-400: #C2714F;
+  --charcoal: #1C1512;
+  --parchment: #E5DDD5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--ivory-100);
+  color: var(--charcoal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Grain overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.022;
+}
+
+/* Custom selection */
+::selection {
+  background-color: #C2714F;
+  color: #fff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ivory-100);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--parchment);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C2714F;
+}
+
+@layer utilities {
+  .section-padding {
+    @apply py-24 lg:py-32;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto px-6 lg:px-8;
+  }
+
+  .heading-xl {
+    @apply font-display text-5xl sm:text-6xl lg:text-7xl leading-[0.95] tracking-tight;
+  }
+
+  .heading-lg {
+    @apply font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight;
+  }
+
+  .heading-md {
+    @apply font-display text-3xl sm:text-4xl leading-tight tracking-tight;
+  }
+
+  .section-label {
+    @apply text-terracotta-400 text-xs uppercase tracking-[0.2em] font-medium;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-8 py-4 bg-terracotta-400 text-white rounded-full text-sm font-medium tracking-[0.12em] uppercase transition-all duration-300 hover:bg-terracotta-500 hover:shadow-lg hover:shadow-terracotta-400/25 hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-8 py-4 border border-current rounded-full text-sm font-medium tracking-[0.12em] uppercase transition-all duration-300 hover:-translate-y-0.5;
+  }
+}
